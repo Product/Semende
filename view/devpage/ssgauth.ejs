@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>신세계인터넷면세점 연동</h1>
+  </head>
+  <body>
+    <div>신세계인터넷면세점 연동을 위하여 아이디와 비밀번호를 입력하여 주세요.</div>
+        <div><%= errormsg %></div>
+   <form action="/auth/ssgmembership" method="post">
+     <p>
+       <input type="text" name="username" placeholder="신세계인터넷면세점 ID">
+     </p>
+     <p>
+       <input type="password" name="password" placeholder="신세계인터넷면세점 PW">
+     </p>
+
+     <p>
+       <input type="submit">
+     </p>
+   </form>
+
+  </body>
+
+</html>
