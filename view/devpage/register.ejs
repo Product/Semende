@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <h1>Test for Register</h1>
+  </head>
+  <body>
+    <div>Register</div>
+   <form action="/auth/register" method="post">
+     <p>
+       <input type="text" name="username" placeholder="ID">
+     </p>
+     <p>
+       <input type="password" name="password" placeholder="password">
+     </p>
+     <p>
+       <input type="text" name="displayName" placeholder="displayName">
+     </p>
+     <p>
+     <input type="checkbox" name="gender" value="Man"> Man
+     <input type="checkbox" name="gender" value="Woman" > Woman
+     </p>
+     <p>
+       <input type="text" name="age" placeholder="age">
+     </p>
+     <p>
+       <select name="job">
+            <option value="">직업선택</option>
+            <option value="학생">학생</option>
+            <option value="회사원">회사원</option>
+            <option value="기타">기타</option>
+        </select>
+     </p>
+     <p>
+       <input type="submit">
+     </p>
+   </form>
+
+  </body>
+
+</html>
