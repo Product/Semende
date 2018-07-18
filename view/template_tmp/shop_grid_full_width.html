@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <![endif]-->
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Modern - Multi Purpose eCommerce Website Template</title>
+<title>세면대 - 세상 모든 면세점 대려와!</title>
 <meta name="description" content="Explore the live preview of the professional Modern - Multi Purpose eCommerce Website Template get yourself knowledgeable about this theme prior to buying it. Browse through the pages, check out the images, click the buttons, explore the features.">
 <meta name="keywords" content="bootstrap, ecommerce, fashion, layout, responsive, responsive template, responsive template download, responsive theme, retail, shop, shopping, store, Premium website templates, web templates, Multi-Purpose Responsive HTML5 Template"/>
 
@@ -56,7 +56,7 @@
 <body class="shop_grid_page">
 <!--[if lt IE 8]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]--> 
+  <![endif]-->
 
 <!-- mobile menu -->
 <div id="mobile-menu">
@@ -264,37 +264,42 @@
   </ul>
 </div>
 <!-- end mobile menu -->
-<div id="page"> 
+<div id="page">
   <!-- Header -->
   <header>
     <div class="header-container">
       <div class="header-top">
         <div class="container">
           <div class="row">
-            <div class="col-lg-4 col-sm-4 hidden-xs"> 
-              <!-- Default Welcome Message -->
-              <div class="welcome-msg ">Welcome to Modern! </div>
-              <span class="phone hidden-sm">Call Us: +123.456.789</span> </div>
-            
+
+
             <!-- top links -->
             <div class="headerlinkmenu col-lg-8 col-md-7 col-sm-8 col-xs-12">
               <div class="links">
-                <div class="myaccount"><a title="My Account" href="account_page.html"><i class="fa fa-user"></i><span class="hidden-xs">My Account</span></a></div>
-                <div class="wishlist"><a title="My Wishlist" href="wishlist.html"><i class="fa fa-heart"></i><span class="hidden-xs">Wishlist</span></a></div>
-                <div class="blog"><a title="Blog" href="blog.html"><i class="fa fa-rss"></i><span class="hidden-xs">Blog</span></a></div>
-                <div class="login"><a href="account_page.html"><i class="fa fa-unlock-alt"></i><span class="hidden-xs">Log In</span></a></div>
+                <!--로그인이 되어있으면 mypage만 보여주고 아닐경우 register / login 만 보여준다.-->
+                <% name = username
+                if(name !=''){
+                  %>
+                <div class="myaccount"><a title="My Account" href="/mypage"><i class="fa fa-user"></i><span class="hidden-xs">마이페이지</span></a></div>
+                <div class="wishlist"><a title="My Wishlist" href="/shopping_cart"><i class="fa fa-heart"></i><span class="hidden-xs">장바구니</span></a></div>
+                <div class="wishlist"><a title="My Wishlist" href="/auth/logout"><i class="fa fa-lock-alt"></i><span class="hidden-xs">로그아웃</span></a></div>
+                <%
+              }
+              else {
+               %>
+                <div class="blog"><a title="Blog" href="/register"><i class="fa fa-group"></i><span class="hidden-xs">회원가입</span></a></div>
+                <div class="login"><a href="/login"><i class="fa fa-unlock-alt"></i><span class="hidden-xs">로그인</span></a></div>
+                <%
+              }
+               %>
               </div>
               <div class="language-currency-wrapper">
                 <div class="inner-cl">
                   <div class="block block-language form-language">
-                    <div class="lg-cur"> <span> <img src="images/flag-default.jpg" alt="French"> <span class="lg-fr">French</span> <i class="fa fa-angle-down"></i> </span> </div>
+                    <div class="lg-cur"> <span> <img src="images/flag-blank.jpg" alt="French"> <span class="lg-fr">Language</span> <i class="fa fa-angle-down"></i> </span> </div>
                     <ul>
-                      <li> <a class="selected" href="#"> <img src="images/flag-english.jpg" alt="flag"> <span>English</span> </a> </li>
-                      <li> <a href="#"> <img src="images/flag-default.jpg" alt="flag"> <span>French</span> </a> </li>
-                      <li> <a href="#"> <img src="images/flag-german.jpg" alt="flag"> <span>German</span> </a> </li>
-                      <li> <a href="#"> <img src="images/flag-brazil.jpg" alt="flag"> <span>Brazil</span> </a> </li>
-                      <li> <a href="#"> <img src="images/flag-chile.jpg" alt="flag"> <span>Chile</span> </a> </li>
-                      <li> <a href="#"> <img src="images/flag-spain.jpg" alt="flag"> <span>Spain</span> </a> </li>
+                      <li> <a href="#"> <img src="images/flag-korea.jpg" alt="flag"> <span>한국어</span> </a> </li>
+                      <li> <a href="#"> <img src="images/flag-china.jpg" alt="flag"> <span>汉语</span> </a> </li>
                     </ul>
                   </div>
                   <div class="block block-currency">
@@ -306,8 +311,8 @@
                     </ul>
                   </div>
                 </div>
-                
-                <!-- End Default Welcome Message --> 
+
+                <!-- End Default Welcome Message -->
               </div>
             </div>
           </div>
@@ -315,84 +320,48 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col-sm-3 col-md-3 col-xs-12"> 
+          <div class="col-sm-3 col-md-3 col-xs-12">
             <!-- Header Logo -->
-            <div class="logo"><a title="e-commerce" href="index.html"><img alt="e-commerce" src="images/logo.png"></a> </div>
-            <!-- End Header Logo --> 
+            <div class="logo"><a title="e-commerce" href="/index"><img alt="responsive theme logo" src="images/saemyundae_logo2.png"></a> </div>
+            <!-- End Header Logo -->
           </div>
-          <div class="col-xs-9 col-sm-6 col-md-6"> 
+          <div class="col-xs-9 col-sm-6 col-md-6">
             <!-- Search -->
-            
+
             <div class="top-search">
               <div id="search">
-                <form><div class="input-group">
-                      <select class="cate-dropdown hidden-xs" name="category_id">
-                        <option>All Categories</option>
-                        <option>women</option>
-                        <option>&nbsp;&nbsp;&nbsp;Accessories </option>
-                        <option>&nbsp;&nbsp;&nbsp;Dresses</option>
-                        <option>&nbsp;&nbsp;&nbsp;Top</option>
-                        <option>&nbsp;&nbsp;&nbsp;Handbags </option>
-                        <option>&nbsp;&nbsp;&nbsp;Shoes </option>
-                        <option>&nbsp;&nbsp;&nbsp;Clothing </option>
-                        <option>Men</option>
-                        <option>Electronics</option>
-                        <option>&nbsp;&nbsp;&nbsp;Mobiles </option>
-                        <option>&nbsp;&nbsp;&nbsp;Music &amp; Audio </option>
-                      </select>
-                      <input type="text" class="form-control" placeholder="Search" name="search">
-                      <button class="btn-search" type="button"><i class="fa fa-search"></i></button>
-                    </div>
+                <form>
+                  <div class="input-group">
+                    <select class="cate-dropdown hidden-xs" name="category_id">
+                      <option>All Categories</option>
+                      <option>women</option>
+                      <option>&nbsp;&nbsp;&nbsp;Accessories </option>
+                      <option>&nbsp;&nbsp;&nbsp;Dresses</option>
+                      <option>&nbsp;&nbsp;&nbsp;Top</option>
+                      <option>&nbsp;&nbsp;&nbsp;Handbags </option>
+                      <option>&nbsp;&nbsp;&nbsp;Shoes </option>
+                      <option>&nbsp;&nbsp;&nbsp;Clothing </option>
+                      <option>Men</option>
+                      <option>Electronics</option>
+                      <option>&nbsp;&nbsp;&nbsp;Mobiles </option>
+                      <option>&nbsp;&nbsp;&nbsp;Music &amp; Audio </option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="Search" name="search">
+                    <button class="btn-search" type="button"><i class="fa fa-search"></i></button>
+                  </div>
                 </form>
               </div>
             </div>
-            
-            <!-- End Search --> 
-          </div>
-          <!-- top cart -->
-          
-          <div class="col-lg-3 col-xs-3 top-cart">
-            <div class="top-cart-contain">
-              <div class="mini-cart">
-                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle"> <a href="#">
-                  <div class="cart-icon"><i class="fa fa-shopping-cart"></i></div>
-                  <div class="shoppingcart-inner hidden-xs"><span class="cart-title">Shopping Cart</span> <span class="cart-total">4 Item(s): $520.00</span></div>
-                  </a></div>
-                <div>
-                  <div class="top-cart-content">
-                    <div class="block-subtitle hidden-xs">Recently added item(s)</div>
-                    <ul id="cart-sidebar" class="mini-products-list">
-                      <li class="item odd"> <a href="shopping_cart.html" title="Ipsums Dolors Untra" class="product-image"><img src="images/products/img01.jpg" alt="Lorem ipsum dolor" width="65"></a>
-                        <div class="product-details"> <a href="#" title="Remove This Item" class="remove-cart"><i class="icon-close"></i></a>
-                          <p class="product-name"><a href="shopping_cart.html">Lorem ipsum dolor sit amet Consectetur</a> </p>
-                          <strong>1</strong> x <span class="price">$20.00</span> </div>
-                      </li>
-                      <li class="item even"> <a href="shopping_cart.html" title="Ipsums Dolors Untra" class="product-image"><img src="images/products/img01.jpg" alt="Lorem ipsum dolor" width="65"></a>
-                        <div class="product-details"> <a href="#" title="Remove This Item" class="remove-cart"><i class="icon-close"></i></a>
-                          <p class="product-name"><a href="shopping_cart.html">Consectetur utes anet adipisicing elit</a> </p>
-                          <strong>1</strong> x <span class="price">$230.00</span> </div>
-                      </li>
-                      <li class="item last odd"> <a href="shopping_cart.html" title="Ipsums Dolors Untra" class="product-image"><img src="images/products/img01.jpg" alt="Lorem ipsum dolor" width="65"></a>
-                        <div class="product-details"> <a href="#" title="Remove This Item" class="remove-cart"><i class="icon-close"></i></a>
-                          <p class="product-name"><a href="shopping_cart.html">Sed do eiusmod tempor incidist</a> </p>
-                          <strong>2</strong> x <span class="price">$420.00</span> </div>
-                      </li>
-                    </ul>
-                    <div class="top-subtotal">Subtotal: <span class="price">$520.00</span></div>
-                    <div class="actions">
-                      <button class="btn-checkout" type="button"><i class="fa fa-check"></i><span>Checkout</span></button>
-                      <button class="view-cart" type="button"><i class="fa fa-shopping-cart"></i> <span>View Cart</span></button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+            <!-- End Search -->
           </div>
         </div>
       </div>
     </div>
   </header>
-  <!-- end header --><!-- Navbar -->
+  <!-- end header -->
+
+  <!-- Navbar -->
   <nav>
     <div class="container">
       <div class="row">
@@ -403,44 +372,52 @@
           <div class="mega-container visible-lg visible-md visible-sm">
             <div class="navleft-container">
               <div class="mega-menu-title">
-                <h3>Categories</h3>
+                <h3>카테고리</h3>
               </div>
               <div class="mega-menu-category">
                 <ul class="nav">
-                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> Camera & Photo</a>
+                  <li> <a href="cat-4-col-full.html"><i class="icon fa fa-camera fa-fw"></i> 스킨케어</a>
                     <div class="wrap-popup">
                       <div class="popup">
                         <div class="row">
                           <div class="col-md-4 col-sm-6">
+                            <h3><a href="shop_grid_full_width.html">기초케어</a></h3>
                             <ul class="nav">
-                              <li><a href="shop_grid.html"><span>Canon</span></a></li>
-                              <li><a href="shop_grid.html"><span>Nikon</span></a></li>
-                              <li><a href="shop_grid.html"><span>Olympus</span> </a></li>
-                              <li><a href="shop_grid.html"><span>ALPA</span> </a></li>
-                              <li> <a href="shop_grid.html"><span>Bolex</span></a></li>
-                              <li><a href="shop_grid.html"><span>Samsung </span></a></li>
-                              <li><a href="shop_grid.html"><span>Panasonic</span></a></li>
-                              <li><a href="shop_grid.html"><span>Thomson </span></a></li>
-                              <li><a href="shop_grid.html"><span>Bell & Howell</span></a></li>
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
                             </ul>
                           </div>
                           <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
                             <ul class="nav">
-                              <li><a href="shop_grid.html"><span>Digital camera</span></a></li>
-                              <li><a href="shop_grid.html"><span>High-speed</span></a></li>
-                              <li><a href="shop_grid.html"><span>Camera phone</span> </a></li>
-                              <li><a href="shop_grid.html"><span>Multiplane</span> </a></li>
-                              <li> <a href="shop_grid.html"><span>Pocket camera</span></a></li>
-                              <li><a href="shop_grid.html"><span>Video camera</span></a></li>
-                              <li><a href="shop_grid.html"><span>Zenith camera</span></a></li>
-                              <li><a href="shop_grid.html"><span>Single-lens reflex</span></a></li>
-                              <li><a href="shop_grid.html"><span>Light-field</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
                             </ul>
                           </div>
                           <div class="col-md-4 has-sep hidden-sm">
                             <div class="custom-menu-right">
                               <div class="box-banner menu-banner">
-                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt=""></a></div>
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
                               </div>
                             </div>
                           </div>
@@ -448,7 +425,7 @@
                       </div>
                     </div>
                   </li>
-                  <li> <a href="#"><i class="icon fa fa-desktop fa-fw"></i> Computers</a>
+                  <li> <a href="#"><i class="icon fa fa-desktop fa-fw"></i> 메이크업</a>
                     <div class="wrap-popup">
                       <div class="popup">
                         <div class="row">
@@ -467,6 +444,7 @@
                               <li> <a href="shop_grid.html">Surface Pro 4</a> </li>
                               <li> <a href="shop_grid.html">HTC Desire 620G</a> </li>
                               <li> <a href="shop_grid.html">DMG Flip Cover</a> </li>
+                              <li> <a href="shop_grid.html">Silicone Keyboard</a> </li>
                             </ul>
                           </div>
                           <div class="col-md-4 col-sm-6 has-sep">
@@ -484,6 +462,7 @@
                               <li> <a href="shop_grid.html">Lenovo IdeaPad</a> </li>
                               <li> <a href="shop_grid.html">Tab 3 A710F Tablet</a> </li>
                               <li> <a href="shop_grid.html">Channel Speakers</a> </li>
+                              <li> <a href="shop_grid.html">Accessories</a> </li>
                             </ul>
                           </div>
                           <div class="col-md-4 has-sep hidden-sm">
@@ -494,14 +473,14 @@
                                     Services </h3>
                                   <div class="price-sale">2017</div>
                                   <a href="#">Shop Now</a> </div>
-                                <div class="add-right"><a href="#"><img src="images/menu-img1.jpg" alt=""></a></div>
+                                <div class="add-right"><a href="#"><img src="images/menu-img1.jpg" alt="html template"></a></div>
                               </div>
                               <div class="box-banner media">
                                 <div class="add-desc">
                                   <h3>Save up to</h3>
                                   <div class="price-sale">75 <sup>%</sup><sub>off</sub></div>
                                   <a href="#">Shopping Now</a> </div>
-                                <div class="add-right"><a href="#"><img src="images/menu-img2.jpg" alt=""></a></div>
+                                <div class="add-right"><a href="#"><img src="images/menu-img2.jpg" alt="html template"></a></div>
                               </div>
                             </div>
                           </div>
@@ -509,67 +488,349 @@
                       </div>
                     </div>
                   </li>
-                  <li> <a href="shop_grid.html"><i class="icon fa fa-apple fa-fw"></i> Apple Store</a>
-                    <div class="wrap-popup column2">
+                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> 바디/헤어/향수</a>
+                    <div class="wrap-popup">
                       <div class="popup">
                         <div class="row">
-                          <div class="col-sm-6">
-                            <h3>iPhone</h3>
+                          <div class="col-md-4 col-sm-6">
+                            <h3>기초케어</h3>
                             <ul class="nav">
-                              <li> <a href="shop_grid.html"> iPhone SE </a> </li>
-                              <li> <a href="shop_grid.htmls"> iPhone 6s Plus </a> </li>
-                              <li> <a href="shop_grid.html"> iPhone 3G </a> </li>
-                              <li> <a href="shop_grid.html"> iPad Pro </a> </li>
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
                             </ul>
                           </div>
-                          <div class="col-sm-6 has-sep">
-                            <h3> Watch </h3>
+                          <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
                             <ul class="nav">
-                              <li> <a href="shop_grid.html"> Quartz Watches </a> </li>
-                              <li> <a href="shop_grid.html"> Lover's Watches</a> </li>
-                              <li> <a href="shop_grid.html"> Digital Watches </a> </li>
-                              <li> <a href="shop_grid.html"> Sport Watch </a> </li>
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
                             </ul>
                           </div>
-                          <div class="col-sm-12"> <a class="ads1" href="#"><img class="img-responsive" src="images/menu-img3.jpg" alt=""></a> </div>
+                          <div class="col-md-4 has-sep hidden-sm">
+                            <div class="custom-menu-right">
+                              <div class="box-banner menu-banner">
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </li>
-                  <li class="nosub"><a href="#"><i class="icon fa fa-location-arrow fa-fw"></i> Car Electronic</a></li>
-                  <li> <a href="shop_grid.html"><i class="icon fa fa-headphones fa-fw"></i> Headphones</a>
-                    <div class="wrap-popup column1">
+                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> 가방/지갑</a>
+                    <div class="wrap-popup">
                       <div class="popup">
-                        <ul class="nav">
-                          <li><a href="shop_grid.html"><span>Envent Stereo</span></a></li>
-                          <li><a href="shop_grid.html"><span>Sennheiser</span></a></li>
-                          <li><a href="shop_grid.html"><span>Philips</span></a></li>
-                          <li><a href="shop_grid.html"><span>Sony</span></a></li>
-                          <li><a href="shop_grid.html"><span>Avantree</span></a></li>
-                          <li><a href="shop_grid.html"><span>Bajaao</span></a></li>
-                          <li><a href="shop_grid.html"><span>FiiO</span></a></li>
-                          <li><a href="shop_grid.html"><span>Audio-Technica</span></a></li>
-                          <li><a href="shop_grid.html"><span>LUXA2</span></a></li>
-                          <li><a href="shop_grid.html"><span>Geekria</span></a></li>
-                        </ul>
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <h3>기초케어</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 has-sep hidden-sm">
+                            <div class="custom-menu-right">
+                              <div class="box-banner menu-banner">
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </li>
-                  <li><a href="#"><i class="icon fa fa-microphone fa-fw"></i> Accessories</a>
-                    <div class="wrap-popup column1">
+                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> 시계/쥬얼리</a>
+                    <div class="wrap-popup">
                       <div class="popup">
-                        <ul class="nav">
-                          <li> <a href="shop_grid.html"> Vacuum Cleaner </a> </li>
-                          <li> <a href="shop_grid.html"> Memore Bluetooth</a> </li>
-                          <li> <a href="shop_grid.html"> On-Ear Headphones </a> </li>
-                          <li> <a href="shop_grid.html"> Digital MP3 Player </a> </li>
-                        </ul>
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <h3>기초케어</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 has-sep hidden-sm">
+                            <div class="custom-menu-right">
+                              <div class="box-banner menu-banner">
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </li>
-                  <li class="nosub"><a href="shop_grid.html"><i class="icon fa fa-gamepad fa-fw"></i> Game &amp; Video</a></li>
-                  <li class="nosub"><a href="shop_grid.html"><i class="icon fa fa-history fa-fw"></i> Old Products</a></li>
-                  <li class="nosub"><a href="shop_grid.html"><i class="icon fa fa-lightbulb-o fa-fw"></i> Lights &amp; Lighting</a></li>
+                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> 패션/잡화</a>
+                    <div class="wrap-popup">
+                      <div class="popup">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <h3>기초케어</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 has-sep hidden-sm">
+                            <div class="custom-menu-right">
+                              <div class="box-banner menu-banner">
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> 디지털/리빙</a>
+                    <div class="wrap-popup">
+                      <div class="popup">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <h3>기초케어</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 has-sep hidden-sm">
+                            <div class="custom-menu-right">
+                              <div class="box-banner menu-banner">
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> 식품</a>
+                    <div class="wrap-popup">
+                      <div class="popup">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <h3>기초케어</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 has-sep hidden-sm">
+                            <div class="custom-menu-right">
+                              <div class="box-banner menu-banner">
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li> <a href="#"><i class="icon fa fa-camera fa-fw"></i> 국내브랜드</a>
+                    <div class="wrap-popup">
+                      <div class="popup">
+                        <div class="row">
+                          <div class="col-md-4 col-sm-6">
+                            <h3>기초케어</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>스킨/토너</span></a></li>
+                              <li><a href="shop_grid.html"><span>로션</span></a></li>
+                              <li><a href="shop_grid.html"><span>크림</span> </a></li>
+                              <li><a href="shop_grid.html"><span>에센스/페이스포일</span> </a></li>
+                              <li><a href="shop_grid.html"><span>미스트</span> </a></li>
+                              <li><a href="shop_grid.html"><span>팩/마스크팩</span> </a></li>
+                              <li><a href="shop_grid.html"><span>아이케어</span> </a></li>
+                            </ul>
+                            <h3>선케어</h3>
+                            <ul class="nav">
+                              <li> <a href="shop_grid.html"><span>로션/크림/젤</span></a></li>
+                              <li><a href="shop_grid.html"><span>파우더/스틱/스프레이</span></a></li>
+                              <li><a href="shop_grid.html"><span>세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 col-sm-6 has-sep">
+                            <h3>클렌징</h3>
+                            <ul class="nav">
+                              <li><a href="shop_grid.html"><span>클렌징크림/오일</span></a></li>
+                              <li><a href="shop_grid.html"><span>클렌징 폼</span></a></li>
+                              <li><a href="shop_grid.html"><span>립/아이리무버</span> </a></li>
+                            </ul>
+                            <h3>남성용</h3>
+                            <ul class="nav">
+                            <li><a href="shop_grid.html"><span>쉐이빙/애프터쉐이브</span> </a></li>
+                              <li> <a href="shop_grid.html"><span>로션/크림/에센스</span></a></li>
+                              <li><a href="shop_grid.html"><span>미스트/팩/마스크팩</span></a></li>
+                              <li><a href="shop_grid.html"><span>아이/립/스페셜케어</span></a></li>
+                              <li><a href="shop_grid.html"><span>기초케어세트</span></a></li>
+                            </ul>
+                          </div>
+                          <div class="col-md-4 has-sep hidden-sm">
+                            <div class="custom-menu-right">
+                              <div class="box-banner menu-banner">
+                                <div class="add-right"><a href="#"><img src="images/menu-img4.jpg" alt="html template"></a></div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -579,36 +840,37 @@
           <div class="mtmegamenu">
             <ul>
               <li class="mt-root demo_custom_link_cms">
-                <div class="mt-root-item"><a href="index.html">
-                  <div class="title title_font"><span class="title-text">Home</span></div>
+                <div class="mt-root-item"><a href="/index">
+                  <div class="title title_font"><span class="title-text">브랜드</span></div>
                   </a></div>
                 <ul class="menu-items col-md-3 col-sm-4 col-xs-12">
                   <li class="menu-item depth-1">
-                    <div class="title"> <a href="index.html"><span>Home Version 1</span></a></div>
+                    <div class="title"> <a href="/index"><span>Home Version 1</span></a></div>
                   </li>
                   <li class="menu-item depth-1">
-                    <div class="title"> <a href="Version2/index.html"><span>Home Version 2</span></a></div>
+                    <div class="title"> <a href="Version2//index"><span>Home Version 2</span></a></div>
                   </li>
                   <li class="menu-item depth-1">
-                    <div class="title"> <a href="Version3/index.html"><span>Home Version 3</span></a></div>
+                    <div class="title"> <a href="Version3//index"><span>Home Version 3</span></a></div>
                   </li>
                   <li class="menu-item depth-1">
-                    <div class="title"> <a href="Version4/index.html"><span>Home Version 4</span></a></div>
+                    <div class="title"> <a href="Version4//index"><span>Home Version 4</span></a></div>
                   </li>
                    <li class="menu-item depth-1">
-                    <div class="title"> <a href="Version5/index.html"><span>Home Version 5</span></a></div>
+                    <div class="title"> <a href="Version5//index"><span>Home Version 5</span></a></div>
                   </li>
                    <li class="menu-item depth-1">
-                    <div class="title"> <a href="rtl-version/index.html"><span>RTL Version</span></a></div>
+                    <div class="title"> <a href="rtl-version//index"><span>RTL Version</span></a></div>
                   </li>
                   <li class="menu-item depth-1">
-                    <div class="title"> <a href="rtl-version1/index.html"><span>Home Version 1 RTL</span></a></div>
+                    <div class="title"> <a href="rtl-version1//index"><span>Home Version 1 RTL</span></a></div>
                   </li>
+
                 </ul>
               </li>
               <li class="mt-root">
                 <div class="mt-root-item"><a href="#">
-                  <div class="title title_font"><span class="title-text">Page</span></div>
+                  <div class="title title_font"><span class="title-text">핫세일</span></div>
                   </a></div>
                 <ul class="menu-items col-xs-12">
                   <li class="menu-item depth-1 menucol-1-3 ">
@@ -627,7 +889,7 @@
                         <div class="title"> <a href="shop_list_right_sidebar.html"> Shop list right sidebar</a></div>
                       </li>
                       <li class="menu-item">
-                        <div class="title"> <a href="shop_grid_full_width.html"> Shop Full width </a></div>
+                        <div class="title"> <a href="shop_grid_full_width.html"> Shop grid full width </a></div>
                       </li>
                     </ul>
                   </li>
@@ -644,7 +906,7 @@
                         <div class="title"> <a href="compare.html"> Compare </a></div>
                       </li>
                       <li class="menu-item">
-                        <div class="title"> <a href="shopping_cart.html"> Shopping cart </a></div>
+                        <div class="title"> <a href="/shopping_cart"> Shopping cart </a></div>
                       </li>
                       <li class="menu-item">
                         <div class="title"> <a href="quick_view.html"> Quick View </a></div>
@@ -697,7 +959,7 @@
                       <li class="menu-item">
                         <div class="title"> <a href="single_product_left_sidebar.html"> single product left sidebar</a></div>
                       </li>
-                        <li class="menu-item">
+                      <li class="menu-item">
                         <div class="title"> <a href="single_product_right_sidebar.html"> single product right sidebar</a></div>
                       </li>
                       <li class="menu-item">
@@ -725,18 +987,14 @@
                 </ul>
               </li>
               <li class="mt-root">
-                <div class="mt-root-item"><a href="contact_us.html">
-                  <div class="title title_font"><span class="title-text">Contact Us</span> </div>
+                <div class="mt-root-item"><a href="/reserve_shilla">
+                  <div class="title title_font"><span class="title-text">이벤트</span> </div>
                   </a></div>
               </li>
-              <li class="mt-root">
-                <div class="mt-root-item"><a href="about_us.html">
-                  <div class="title title_font"><span class="title-text">about us</span></div>
-                  </a></div>
-              </li>
+
               <li class="mt-root demo_custom_link_cms">
                 <div class="mt-root-item"><a href="blog.html">
-                  <div class="title title_font"><span class="title-text">Blog</span></div>
+                  <div class="title title_font"><span class="title-text">문의사항</span></div>
                   </a></div>
                 <ul class="menu-items col-md-3 col-sm-4 col-xs-12">
                   <li class="menu-item depth-1">
@@ -755,7 +1013,7 @@
               </li>
               <li class="mt-root">
                 <div class="mt-root-item">
-                  <div class="title title_font"><span class="title-text">Best Seller</span></div>
+                  <div class="title title_font"><span class="title-text">베스트</span></div>
                 </div>
                 <ul class="menu-items col-xs-12">
                   <li class="menu-item depth-1 product menucol-1-3 withimage">
@@ -764,7 +1022,7 @@
                         <div class="product-thumbnail">
                           <div class="icon-sale-label sale-left">Sale</div>
                           <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                            <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                            <figure> <img class="first-img" src="images/products/img01.jpg" alt="html template"> <img class="hover-img" src="images/products/img01.jpg" alt="html template"></figure>
                             </a>
                             <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                           </div>
@@ -796,7 +1054,7 @@
                         <div class="product-thumbnail">
                           <div class="icon-sale-label sale-left">Sale</div>
                           <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                            <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                            <figure> <img class="first-img" src="images/products/img01.jpg" alt="html template"> <img class="hover-img" src="images/products/img01.jpg" alt="html template"></figure>
                             </a>
                             <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                           </div>
@@ -830,7 +1088,7 @@
                         <div class="product-thumbnail">
                           <div class="icon-sale-label sale-left">Sale</div>
                           <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                            <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                            <figure> <img class="first-img" src="images/products/img01.jpg" alt="html template"> <img class="hover-img" src="images/products/img01.jpg" alt="html template"></figure>
                             </a>
                             <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                           </div>
@@ -864,23 +1122,23 @@
       </div>
     </div>
   </nav>
-  <!-- end nav --> 
+  <!-- end nav -->
   <!-- Breadcrumbs -->
-  
+
   <div class="breadcrumbs">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
           <ul>
-            <li class="home"> <a title="Go to Home Page" href="index.html">Home</a><span>&raquo;</span></li>
-            <li class=""> <a title="Go to Home Page" href="shop_grid.html">Computers</a><span>&raquo;</span></li>
-            <li><strong> Camera & Photo</strong></li>
+            <li class="home"> <a title="Go to Home Page" href="index.html">홈</a><span>&raquo;</span></li>
+            <li class=""> <a title="Go to Home Page" href="shop_grid.html">스킨케어</a><span>&raquo;</span></li>
+            <li><strong> 기초케어</strong></li>
           </ul>
         </div>
       </div>
     </div>
   </div>
-  <!-- Breadcrumbs End --> 
+  <!-- Breadcrumbs End -->
   <!-- Main Container -->
   <div class="main-container col1-layout">
     <div class="container">
@@ -888,26 +1146,24 @@
         <div class="col-main col-sm-12 col-xs-12">
           <div class="shop-inner">
             <div class="page-title">
-              <h2> Camera & Photo</h2>
+              <h2> 기초케어</h2>
             </div>
             <div class="toolbar column">
               <div class="sorter">
                 <div class="short-by">
-                  <label>Sort By:</label>
+                  <label>페이지: </label>
                   <select>
-                    <option selected="selected">Position</option>
-                    <option>Name</option>
-                    <option>Price</option>
-                    <option>Size</option>
+                    <option selected="selected">16개씩 보기</option>
+                    <option>32개씩 보기</option>
                   </select>
                 </div>
-                <div class="short-by page">
-                  <label>Show:</label>
+                <div class="short-by">
+                  <label>정렬 방법:</label>
                   <select>
-                    <option selected="selected">16</option>
-                    <option>20</option>
-                    <option>25</option>
-                    <option>30</option>
+                    <option selected="selected">인기순</option>
+                    <option>최신순</option>
+                    <option>낮은가격순</option>
+                    <option>높은가격순</option>
                   </select>
                 </div>
               </div>
@@ -918,28 +1174,23 @@
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="icon-sale-label sale-left">Sale</div>
-                        <div class="icon-new-label new-right">New</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image1.shilladfs.com/files/product/2018/06/08/053810000014_20180608_05074815_13_053810000014_4.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="ULTRA FACIAL TONER" href="single_product.html">ULTRA FACIAL TONER </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="키엘" href="single_product.html">키엘 </a></div>
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$19</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -951,29 +1202,23 @@
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image1.shilladfs.com/files/product/2018/06/17/002010000440_20180617_16083903_12_002010000440_4.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="제니피끄 유쓰 액티베이터 아이 컨센트레이트 듀오 20ml*2" href="single_product.html">제니피끄 유쓰 액티베이터 아이 컨센트레이트 듀오 20ml*2 </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="랑콤" href="single_product.html">랑콤 </a></div>
                             <div class="item-price">
-                              <div class="price-box">
-                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
-                              </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$134.9</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -985,62 +1230,23 @@
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image1.shilladfs.com/files/product/2017/11/21/083511000007_20171121_14263576_12_083511000007_3.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="Atoderm Stick Levres" href="single_product.html">Atoderm Stick Levres </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="바이오더마" href="single_product.html">바이오더마 </a></div>
                             <div class="item-price">
-                              <div class="price-box">
-                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
-                  <div class="product-item">
-                    <div class="item-inner">
-                      <div class="icon-sale-label sale-left">Sale</div>
-                      <div class="icon-new-label new-right">New</div>
-                      <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
-                          </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
-                        </div>
-                        <div class="pr-info-area">
-                          <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-info">
-                        <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
-                          <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
-                            <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$9.9</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1052,30 +1258,23 @@
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="icon-new-label new-left">New</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2018/01/05/670610000352_20180105_11453557_12_670610000352_1.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="자음 2종" href="single_product.html">자음 2종 </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="설화수" href="single_product.html">설화수 </a></div>
                             <div class="item-price">
-                              <div class="price-box">
-                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
-                              </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$86.45</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1083,64 +1282,30 @@
                     </div>
                   </div>
                 </li>
-                <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
-                  <div class="product-item">
-                    <div class="item-inner">
-                      <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
-                          </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
-                        </div>
-                        <div class="pr-info-area">
-                          <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-info">
-                        <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
-                          <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                            <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$89.99</span> </span> </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <!-- .a2 --> 
-                
+                <!-- .a2 -->
+
                 <!-- b2 -->
                 <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image1.shilladfs.com/files/product/2018/04/12/002010000326_20180412_15191622_12_002010000326_2.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="레네르지 멀티 리프트 리디파이닝 뷰티 로션 200ml" href="single_product.html">레네르지 멀티 리프트 리디파이닝 뷰티 로션 200ml </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="랑콤" href="single_product.html">랑콤 </a></div>
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$125.99</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$46.55</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1148,33 +1313,58 @@
                     </div>
                   </div>
                 </li>
-                <!-- .b2 --> 
-                
+                <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
+                  <div class="product-item">
+                    <div class="item-inner">
+                      <div class="product-thumbnail">
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2017/12/19/083510000036_20171219_09095190_12_083510000036_2.JPG" alt=""></figure>
+                          </a>
+                        </div>
+                        <div class="pr-info-area">
+                          <div class="pr-button">
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-info">
+                        <div class="info-inner">
+                          <div class="item-title"> <a title="하이드라비오 에센스 로션(수분 미백 부스터)" href="single_product.html">하이드라비오 에센스 로션(수분 미백 부스터) </a> </div>
+                          <div class="item-content">
+                            <div class="brand"> <a title="바이오더마" href="single_product.html">바이오더마 </a></div>
+                            <div class="item-price">
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$20.7</span> </span> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <!-- .b2 -->
+
                 <!-- c2 -->
                 <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2017/09/12/001810000441_20170912_09345607_12_001810000441_1.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="어드밴스드 나이트 리페어 아이 컨센트레이트 매트릭스 듀오" href="single_product.html">어드밴스드 나이트 리페어 아이 컨센트레이트 매트릭스 듀오 </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="에스티로더" href="single_product.html">에스티로더 </a></div>
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$225.88</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$128.25</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1182,66 +1372,30 @@
                     </div>
                   </div>
                 </li>
-                <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
-                  <div class="product-item">
-                    <div class="item-inner">
-                      <div class="product-thumbnail">
-                        <div class="icon-new-label new-right">New</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
-                          </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
-                        </div>
-                        <div class="pr-info-area">
-                          <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-info">
-                        <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
-                          <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                            <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$55.00</span> </span> </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <!-- .a1 --> 
-                
+                <!-- .a1 -->
+
                 <!-- b1 -->
                 <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="icon-sale-label sale-left">Sale</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2018/04/04/666010000185_20180404_10070215_12_666010000185_1.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="더 트루 크림 아쿠아밤 125ml" href="single_product.html">더 트루 크림 아쿠아밤 125ml </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="빌리프" href="single_product.html">빌리프 </a></div>
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$59.00</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$55.8</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1249,34 +1403,30 @@
                     </div>
                   </div>
                 </li>
-                <!-- .b1 --> 
-                
+                <!-- .b1 -->
+
                 <!-- c1 -->
                 <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="icon-new-label new-right">New</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2017/07/11/053810000047_20170711_09295709_07_053810000047_3.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="상품명" href="single_product.html">상품명 </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="브랜드명" href="single_product.html">브랜드명 </a></div>
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$120.99</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$원가</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1288,27 +1438,50 @@
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="icon-new-label new-right">New</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2017/07/11/053810000047_20170711_09295709_07_053810000047_3.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="상품명" href="single_product.html">상품명 </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="브랜드명" href="single_product.html">브랜드명 </a></div>
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$99.00</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$원가</span> </span> </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li><li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
+                  <div class="product-item">
+                    <div class="item-inner">
+                      <div class="product-thumbnail">
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2017/07/11/053810000047_20170711_09295709_07_053810000047_3.JPG" alt=""></figure>
+                          </a>
+                        </div>
+                        <div class="pr-info-area">
+                          <div class="pr-button">
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="item-info">
+                        <div class="info-inner">
+                          <div class="item-title"> <a title="상품명" href="single_product.html">상품명 </a> </div>
+                          <div class="item-content">
+                            <div class="brand"> <a title="브랜드명" href="single_product.html">브랜드명 </a></div>
+                            <div class="item-price">
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$원가</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1320,28 +1493,23 @@
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="icon-sale-label sale-left">Sale</div>
-                        <div class="icon-new-label new-right">New</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2017/07/11/053810000047_20170711_09295709_07_053810000047_3.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="상품명" href="single_product.html">상품명 </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="브랜드명" href="single_product.html">브랜드명 </a></div>
                             <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$원가</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1353,96 +1521,23 @@
                   <div class="product-item">
                     <div class="item-inner">
                       <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
+                        <div class="pr-img-area"> <a title="상품명" href="single_product.html">
+                          <figure> <img class="first-img" src="http://image2.shilladfs.com/files/product/2017/07/11/053810000047_20170711_09295709_07_053810000047_3.JPG" alt=""></figure>
                           </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
                         </div>
                         <div class="pr-info-area">
                           <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
+                            <div class="mt-button quick-view"> <a href="single_product.html"> <i class="fa fa-search"></i> </a> </div>
                           </div>
                         </div>
                       </div>
                       <div class="item-info">
                         <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
+                          <div class="item-title"> <a title="상품명" href="single_product.html">상품명 </a> </div>
                           <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> </div>
+                            <div class="brand"> <a title="브랜드명" href="single_product.html">브랜드명 </a></div>
                             <div class="item-price">
-                              <div class="price-box">
-                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
-                  <div class="product-item">
-                    <div class="item-inner">
-                      <div class="product-thumbnail">
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
-                          </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
-                        </div>
-                        <div class="pr-info-area">
-                          <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-info">
-                        <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
-                          <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                            <div class="item-price">
-                              <div class="price-box">
-                                <p class="special-price"> <span class="price-label">Special Price</span> <span class="price"> $456.00 </span> </p>
-                                <p class="old-price"> <span class="price-label">Regular Price:</span> <span class="price"> $567.00 </span> </p>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <li class="item col-lg-3 col-md-4 col-sm-6 col-xs-6 ">
-                  <div class="product-item">
-                    <div class="item-inner">
-                      <div class="product-thumbnail">
-                        <div class="icon-sale-label sale-left">Sale</div>
-                        <div class="icon-new-label new-right">New</div>
-                        <div class="pr-img-area"> <a title="Ipsums Dolors Untra" href="single_product.html">
-                          <figure> <img class="first-img" src="images/products/img01.jpg" alt=""> <img class="hover-img" src="images/products/img01.jpg" alt=""></figure>
-                          </a>
-                          <button type="button" class="add-to-cart-mt"> <i class="fa fa-shopping-cart"></i><span> Add to Cart</span> </button>
-                        </div>
-                        <div class="pr-info-area">
-                          <div class="pr-button">
-                            <div class="mt-button add_to_wishlist"> <a href="wishlist.html"> <i class="fa fa-heart"></i> </a> </div>
-                            <div class="mt-button add_to_compare"> <a href="compare.html"> <i class="fa fa-signal"></i> </a> </div>
-                            <div class="mt-button quick-view"> <a href="quick_view.html"> <i class="fa fa-search"></i> </a> </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="item-info">
-                        <div class="info-inner">
-                          <div class="item-title"> <a title="Ipsums Dolors Untra" href="single_product.html">Ipsums Dolors Untra </a> </div>
-                          <div class="item-content">
-                            <div class="rating"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> </div>
-                            <div class="item-price">
-                              <div class="price-box"> <span class="regular-price"> <span class="price">$125.00</span> </span> </div>
+                              <div class="price-box"> <span class="regular-price"> <span class="price">$원가</span> </span> </div>
                             </div>
                           </div>
                         </div>
@@ -1465,31 +1560,14 @@
       </div>
     </div>
   </div>
-  <!-- Main Container End --> 
+  <!-- Main Container End -->
   <!-- Footer -->
-  
+
   <footer>
     <div class="footer-newsletter">
       <div class="container">
         <div class="row">
           <div class="col-md-8 col-sm-7">
-            <form id="newsletter-validate-detail" method="post" action="#">
-              <h3 class="hidden-sm">Sign up for newsletter</h3>
-              <div class="newsletter-inner">
-                <input class="newsletter-email" name='Email' placeholder='Enter Your Email'/>
-                <button class="button subscribe" type="submit" title="Subscribe">Subscribe</button>
-              </div>
-            </form>
-          </div>
-          <div class="social col-md-4 col-sm-5">
-            <ul class="inline-mode">
-              <li class="social-network fb"><a title="Connect us on Facebook" target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
-              <li class="social-network googleplus"><a title="Connect us on Google+" target="_blank" href="#"><i class="fa fa-google-plus"></i></a></li>
-              <li class="social-network tw"><a title="Connect us on Twitter" target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
-              <li class="social-network linkedin"><a title="Connect us on Linkedin" target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li class="social-network rss"><a title="Connect us on RSS" target="_blank" href="#"><i class="fa fa-rss"></i></a></li>
-              <li class="social-network instagram"><a title="Connect us on Instagram" target="_blank" href="#"><i class="fa fa-instagram"></i></a></li>
-            </ul>
           </div>
         </div>
       </div>
@@ -1497,62 +1575,28 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-6 col-md-4 col-xs-12 col-lg-3">
-          <div class="footer-logo"><a href="index.html"><img src="images/footer-logo.png" alt="fotter logo"></a> </div>
-          <p>Lorem Ipsum is simply dummy text of the print and typesetting industry.</p>
+          <div class="footer-logo"><a href="/index"><img src="images/saemyundae_logo2.png" alt="fotter logo"></a> </div>
+          <p>세면대는 인터넷 면세점을 이용하거나 관련 정보를 얻고 싶을 때 도움을 주는 최고의 ‘도우미’입니다.</p>
+
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-12 col-lg-3 collapsed-block">
           <div class="footer-content">
             <div class="email"> <i class="fa fa-envelope"></i>
-              <p><a href="mailto:support@template.com">support@template.com</a></p>
+              <p><a href="mailto:support@template.com">Saemyundae@google.com</a></p>
             </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-12 col-lg-3 collapsed-block">
+          <div class="footer-content">
             <div class="phone"> <i class="fa fa-phone"></i>
-              <p>(800) 0123 456 789</p>
+              <p>(02) 712-5233</p>
             </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 col-xs-12 col-lg-3 collapsed-block">
+          <div class="footer-content">
             <div class="address"> <i class="fa fa-map-marker"></i>
-              <p> My Company, 12/34 - West 21st Street, New York, USA</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-xs-12 col-lg-3 collapsed-block">
-          <div class="footer-links">
-            <h3 class="links-title">Information<a class="expander visible-xs" href="#TabBlock-1">+</a></h3>
-            <div class="tabBlock" id="TabBlock-1">
-              <ul class="list-links list-unstyled">
-                <li><a href="#s">Delivery Information</a></li>
-                <li><a href="#">Discount</a></li>
-                <li><a href="sitemap.html">Sitemap</a></li>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="faq.html">FAQs</a></li>
-                <li><a href="#">Terms &amp; Condition</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-3 col-xs-12 col-lg-3 collapsed-block">
-          <div class="footer-links">
-            <h3 class="links-title">Insider<a class="expander visible-xs" href="#TabBlock-3">+</a></h3>
-            <div class="tabBlock" id="TabBlock-3">
-              <ul class="list-links list-unstyled">
-                <li> <a href="sitemap.html"> Sites Map </a> </li>
-                <li> <a href="#">News</a> </li>
-                <li> <a href="#">Trends</a> </li>
-                <li> <a href="about_us.html">About Us</a> </li>
-                <li> <a href="contact_us.html">Contact Us</a> </li>
-                <li> <a href="#">My Orders</a> </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-6 col-md-2 col-xs-12 col-lg-3 collapsed-block">
-          <div class="footer-links">
-            <h3 class="links-title">Service<a class="expander visible-xs" href="#TabBlock-4">+</a></h3>
-            <div class="tabBlock" id="TabBlock-4">
-              <ul class="list-links list-unstyled">
-                <li> <a href="account_page.html">Account</a> </li>
-                <li> <a href="wishlist.html">Wishlist</a> </li>
-                <li> <a href="shopping_cart.html">Shopping Cart</a> </li>
-                <li> <a href="#">Return Policy</a> </li>
-                <li> <a href="#">Special</a> </li>
-                <li> <a href="#">Lookbook</a> </li>
-              </ul>
+              <p> 서울시 노원구 공릉동 232-2 3층</p>
             </div>
           </div>
         </div>
@@ -1578,44 +1622,44 @@
   </footer>
   <a href="#" class="totop"> </a> </div>
 
-<!-- End Footer --> 
-<!-- JS --> 
+<!-- End Footer -->
+<!-- JS -->
 
-<!-- jquery js --> 
-<script type="text/javascript" src="js/jquery.min.js"></script> 
+<!-- jquery js -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
 
-<!-- bootstrap js --> 
-<script type="text/javascript" src="js/bootstrap.min.js"></script> 
+<!-- bootstrap js -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-<!-- owl.carousel.min js --> 
-<script type="text/javascript" src="js/owl.carousel.min.js"></script> 
+<!-- owl.carousel.min js -->
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
-<!-- bxslider js --> 
-<script type="text/javascript" src="js/jquery.bxslider.js"></script> 
+<!-- bxslider js -->
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
 
-<!--jquery-slider js --> 
-<script type="text/javascript" src="js/slider.js"></script> 
+<!--jquery-slider js -->
+<script type="text/javascript" src="js/slider.js"></script>
 
-<!-- megamenu js --> 
-<script type="text/javascript" src="js/megamenu.js"></script> 
+<!-- megamenu js -->
+<script type="text/javascript" src="js/megamenu.js"></script>
 <script type="text/javascript">
-        /* <![CDATA[ */   
+        /* <![CDATA[ */
         var mega_menu = '0';
-        
+
         /* ]]> */
-        </script> 
+        </script>
 
-<!-- jquery.mobile-menu js --> 
-<script type="text/javascript" src="js/mobile-menu.js"></script> 
+<!-- jquery.mobile-menu js -->
+<script type="text/javascript" src="js/mobile-menu.js"></script>
 
-  
 
- 
 
-<!--jquery-ui.min js --> 
-<script type="text/javascript" src="js/jquery-ui.js"></script> 
 
-<!-- main js --> 
+
+<!--jquery-ui.min js -->
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+
+<!-- main js -->
 <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>

@@ -32,19 +32,22 @@ soup = BeautifulSoup(html,'html.parser')
 req1 = soup.find("a",{"id" : "selectSvmn_01"}).find("strong")
 price1 = remove_html_tags(str(req1))
 price1 = "".join(price1.split());
-print(price1)
+price1 = price1.replace(",","");
 
 #플러스 적립금
-#req2 = soup.find("a",{"id" : "selectSvmn_02"}).find("strong")
-#price2 = remove_html_tags(str(req2))
-#print(price2)
+req2 = soup.find("a",{"id" : "selectSvmn_02"}).find("strong")
+price2 = remove_html_tags(str(req2))
+price2 = "".join(price2.split());
 
 #PC전용 적립금
-#req3 = soup.find("a",{"id" : "selectSvmn_03"}).find("strong")
-#price3 = remove_html_tags(str(req3))
-#print(price3)
+req3 = soup.find("a",{"id" : "selectSvmn_03"}).find("strong")
+price3 = remove_html_tags(str(req3))
+price3 = "".join(price3.split());
 
 #모바일 전용 적립금
-#req4 = soup.find("a",{"id" : "selectSvmn_04"}).find("strong")
-#price4 = remove_html_tags(str(req4))
-#print(price4)
+req4 = soup.find("a",{"id" : "selectSvmn_04"}).find("strong")
+price4 = remove_html_tags(str(req4))
+price4 = "".join(price4.split());
+
+allprice = int(price1) + int(price2) + int(price3) + int(price4);
+print(allprice)

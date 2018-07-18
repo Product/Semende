@@ -62,7 +62,7 @@ def ssg():
     
 def lotte():
       # HTTP GET Request
-    req = requests.get('http://kor.lottedfs.com/kr/product/productDetail?prdNo=10001860657&dispShopNo1=1100001&dispShopNo2=1100002&dispShopNo3=1100003')
+      req = requests.get('http://kor.lottedfs.com/kr/product/productDetail?prdNo=10001860657&dispShopNo1=1100001&dispShopNo2=1100002&dispShopNo3=1100003')
     # HTML 소스 가져오기
     html = req.text
     soup = BeautifulSoup(html, 'html.parser')
